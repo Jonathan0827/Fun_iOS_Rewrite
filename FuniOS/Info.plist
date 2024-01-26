@@ -2,31 +2,33 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string></string>
+			<string>GLogin</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>3288270687-hu4j4r35kpodaag81llghnpg39otpm8f.apps.googleusercontent.com</string>
+				<string>3288270687-bubevuc0og385uh8ua33od61rq1vs4l8.apps.googleusercontent.com</string>
 			</array>
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string></string>
+			<string>GLogin2</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.3288270687-hu4j4r35kpodaag81llghnpg39otpm8f</string>
+				<string>com.googleusercontent.apps.3288270687-bubevuc0og385uh8ua33od61rq1vs4l8</string>
 			</array>
 		</dict>
 	</array>
 	<key>GIDClientID</key>
-	<string>3288270687-hu4j4r35kpodaag81llghnpg39otpm8f.apps.googleusercontent.com</string>
+	<string>com.googleusercontent.apps.3288270687-bubevuc0og385uh8ua33od61rq1vs4l8</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -34,7 +36,7 @@
 		<key>NSAllowsArbitraryLoadsInWebContent</key>
 		<true/>
 		<key>NSAllowsLocalNetworking</key>
-		<true/>
+		<false/>
 		<key>NSExceptionDomains</key>
 		<dict>
 			<key>localhost:4000</key>

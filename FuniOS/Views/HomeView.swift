@@ -41,6 +41,7 @@ struct HomeView: View {
                     NavigationLink(destination: PSView()) {
                         PSWidget()
                             .foregroundStyle(.cprimary)
+                            .frame(height: 300)
                     }
                     //                NavigationLink(destination: PSView()) {
                     //                    Text("문제 풀이")
@@ -58,7 +59,7 @@ struct HomeView: View {
                     //                })
                     //                .buttonStyle(fancyButton(bbtn: false))
                     Spacer()
-                    Divider()
+//                    Divider()
 //                    Button("Test Alert", action: {
 //                        //                    alertWDB = alertWithDBtn(showAlert: true, alertTitle: "Test", alertMsg: "Test", alertButton: "Test")
 //                        alertToShow = makeAlert(title: "Test", message: "Test", btnMsg: "b1")
