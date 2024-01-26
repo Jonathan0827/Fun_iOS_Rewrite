@@ -1,0 +1,93 @@
+PODS:
+  - Alamofire (5.8.1)
+  - AlertToast (1.3.9)
+  - AppAuth (1.6.2):
+    - AppAuth/Core (= 1.6.2)
+    - AppAuth/ExternalUserAgent (= 1.6.2)
+  - AppAuth/Core (1.6.2)
+  - AppAuth/ExternalUserAgent (1.6.2):
+    - AppAuth/Core
+  - BlueCryptor (1.0.32)
+  - BlueECC (1.2.5)
+  - BlueRSA (1.0.200)
+  - CryptoSwift (1.8.0)
+  - GoogleSignIn (7.0.0):
+    - AppAuth (~> 1.5)
+    - GTMAppAuth (< 3.0, >= 1.3)
+    - GTMSessionFetcher/Core (< 4.0, >= 1.1)
+  - GoogleSignInSwiftSupport (7.0.0):
+    - GoogleSignIn (~> 7.0)
+  - GTMAppAuth (2.0.0):
+    - AppAuth/Core (~> 1.6)
+    - GTMSessionFetcher/Core (< 4.0, >= 1.5)
+  - GTMSessionFetcher/Core (3.2.0)
+  - KituraContracts (1.2.1):
+    - LoggerAPI (~> 1.7)
+  - LoggerAPI (1.9.200):
+    - Logging (~> 1.1)
+  - Logging (1.4.0)
+  - Macaw (0.9.10):
+    - SWXMLHash
+  - SVGView (1.0.6)
+  - SwiftJWT (3.6.200):
+    - BlueCryptor (~> 1.0)
+    - BlueECC (~> 1.1)
+    - BlueRSA (~> 1.0)
+    - KituraContracts (~> 1.2)
+    - LoggerAPI (~> 1.7)
+  - SWXMLHash (7.0.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlertToast
+  - CryptoSwift (~> 1.8.0)
+  - GoogleSignIn
+  - GoogleSignInSwiftSupport
+  - Macaw
+  - SVGView
+  - SwiftJWT
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlertToast
+    - AppAuth
+    - BlueCryptor
+    - BlueECC
+    - BlueRSA
+    - CryptoSwift
+    - GoogleSignIn
+    - GoogleSignInSwiftSupport
+    - GTMAppAuth
+    - GTMSessionFetcher
+    - KituraContracts
+    - LoggerAPI
+    - Logging
+    - Macaw
+    - SVGView
+    - SwiftJWT
+    - SWXMLHash
+
+SPEC CHECKSUMS:
+  Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
+  AlertToast: e8db15da727beff75500bcf33a78cd617f408fa1
+  AppAuth: 3bb1d1cd9340bd09f5ed189fb00b1cc28e1e8570
+  BlueCryptor: b0aee3d9b8f367b49b30de11cda90e1735571c24
+  BlueECC: 0d18e93347d3ec6d41416de21c1ffa4d4cd3c2cc
+  BlueRSA: dfeef51db96bcc4edec654956c1581adbda4e6a3
+  CryptoSwift: 52aaf3fce7337552863b1d952e408085f0e65030
+  GoogleSignIn: b232380cf495a429b8095d3178a8d5855b42e842
+  GoogleSignInSwiftSupport: 6ca6e5a978faa4cd43451b6b9b38b96ab5db1734
+  GTMAppAuth: 99fb010047ba3973b7026e45393f51f27ab965ae
+  GTMSessionFetcher: 41b9ef0b4c08a6db4b7eb51a21ae5183ec99a2c8
+  KituraContracts: e845e60dc8627ad0a76fa55ef20a45451d8f830b
+  LoggerAPI: ad9c4a6f1e32f518fdb43a1347ac14d765ab5e3d
+  Logging: beeb016c9c80cf77042d62e83495816847ef108b
+  Macaw: 7af8ea57aa2cab35b4a52a45e6f85eea753ea9ae
+  SVGView: 4a9fa6296a5fdb6232dec7450aa98f169d0e274f
+  SwiftJWT: 88c412708f58c169d431d344c87bc79a87c830ae
+  SWXMLHash: dd733a457e9c4fe93b1538654057aefae4acb382
+
+PODFILE CHECKSUM: 4da19befaca102a1bfb839a992833372d4e5d92c
+
+COCOAPODS: 1.14.3

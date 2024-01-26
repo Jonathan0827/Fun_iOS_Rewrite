@@ -1,0 +1,570 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03D28CB43D2CD1D68E60C2F4 /* libPods-FuniOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5596EEC937BDB0A24A1B55E /* libPods-FuniOS.a */; };
+		9103DEDC2B63C5A100DDDD5F /* FuniOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DEDB2B63C5A100DDDD5F /* FuniOSApp.swift */; };
+		9103DEE02B63C5A300DDDD5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9103DEDF2B63C5A300DDDD5F /* Assets.xcassets */; };
+		9103DEE32B63C5A300DDDD5F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9103DEE22B63C5A300DDDD5F /* Preview Assets.xcassets */; };
+		9103DEEE2B63C69B00DDDD5F /* CheckIfNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DEE92B63C69A00DDDD5F /* CheckIfNil.swift */; };
+		9103DEEF2B63C69B00DDDD5F /* GLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DEEA2B63C69B00DDDD5F /* GLogin.swift */; };
+		9103DEF02B63C69B00DDDD5F /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DEEB2B63C69B00DDDD5F /* Token.swift */; };
+		9103DEF12B63C69B00DDDD5F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DEEC2B63C69B00DDDD5F /* Validation.swift */; };
+		9103DEF62B63C6A800DDDD5F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9103DEF52B63C6A800DDDD5F /* Launch Screen.storyboard */; };
+		9103DF012B63C6BC00DDDD5F /* ConsoleStuffs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DEF82B63C6BB00DDDD5F /* ConsoleStuffs.swift */; };
+		9103DF022B63C6BC00DDDD5F /* APIStuffs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DEF92B63C6BB00DDDD5F /* APIStuffs.swift */; };
+		9103DF032B63C6BC00DDDD5F /* KeychainStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DEFA2B63C6BB00DDDD5F /* KeychainStuff.swift */; };
+		9103DF042B63C6BC00DDDD5F /* UnknownStuffs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DEFB2B63C6BB00DDDD5F /* UnknownStuffs.swift */; };
+		9103DF052B63C6BC00DDDD5F /* Stuffs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DEFC2B63C6BB00DDDD5F /* Stuffs.swift */; };
+		9103DF062B63C6BC00DDDD5F /* FancyStuffs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DEFD2B63C6BB00DDDD5F /* FancyStuffs.swift */; };
+		9103DF072B63C6BC00DDDD5F /* StorageStuffs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DEFE2B63C6BB00DDDD5F /* StorageStuffs.swift */; };
+		9103DF082B63C6BC00DDDD5F /* ImportantStuffs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DEFF2B63C6BB00DDDD5F /* ImportantStuffs.swift */; };
+		9103DF092B63C6BC00DDDD5F /* LoginStuffs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DF002B63C6BB00DDDD5F /* LoginStuffs.swift */; };
+		9103DF142B63C6C900DDDD5F /* SignUpAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DF0B2B63C6C900DDDD5F /* SignUpAlert.swift */; };
+		9103DF152B63C6C900DDDD5F /* WidgetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DF0C2B63C6C900DDDD5F /* WidgetViews.swift */; };
+		9103DF162B63C6C900DDDD5F /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DF0D2B63C6C900DDDD5F /* Icon.swift */; };
+		9103DF172B63C6C900DDDD5F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DF0E2B63C6C900DDDD5F /* HomeView.swift */; };
+		9103DF182B63C6C900DDDD5F /* PrefsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DF0F2B63C6C900DDDD5F /* PrefsView.swift */; };
+		9103DF192B63C6C900DDDD5F /* PSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DF102B63C6C900DDDD5F /* PSView.swift */; };
+		9103DF1A2B63C6C900DDDD5F /* DevelopmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DF112B63C6C900DDDD5F /* DevelopmentView.swift */; };
+		9103DF1B2B63C6C900DDDD5F /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DF122B63C6C900DDDD5F /* OnboardingView.swift */; };
+		9103DF1C2B63C6C900DDDD5F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DF132B63C6C900DDDD5F /* ContentView.swift */; };
+		9103DF1F2B63C8B000DDDD5F /* LocalConsole in Frameworks */ = {isa = PBXBuildFile; productRef = 9103DF1E2B63C8B000DDDD5F /* LocalConsole */; };
+		9103DF212B63D5E600DDDD5F /* LocalConsole in Frameworks */ = {isa = PBXBuildFile; productRef = 9103DF202B63D5E600DDDD5F /* LocalConsole */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5E231AA621DA122BE13F4028 /* Pods-FuniOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuniOS.release.xcconfig"; path = "Target Support Files/Pods-FuniOS/Pods-FuniOS.release.xcconfig"; sourceTree = "<group>"; };
+		9103DED82B63C5A100DDDD5F /* FuniOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuniOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9103DEDB2B63C5A100DDDD5F /* FuniOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuniOSApp.swift; sourceTree = "<group>"; };
+		9103DEDF2B63C5A300DDDD5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9103DEE22B63C5A300DDDD5F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9103DEE92B63C69A00DDDD5F /* CheckIfNil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckIfNil.swift; sourceTree = "<group>"; };
+		9103DEEA2B63C69B00DDDD5F /* GLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLogin.swift; sourceTree = "<group>"; };
+		9103DEEB2B63C69B00DDDD5F /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		9103DEEC2B63C69B00DDDD5F /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		9103DEF32B63C6A100DDDD5F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9103DEF52B63C6A800DDDD5F /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		9103DEF82B63C6BB00DDDD5F /* ConsoleStuffs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleStuffs.swift; sourceTree = "<group>"; };
+		9103DEF92B63C6BB00DDDD5F /* APIStuffs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIStuffs.swift; sourceTree = "<group>"; };
+		9103DEFA2B63C6BB00DDDD5F /* KeychainStuff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStuff.swift; sourceTree = "<group>"; };
+		9103DEFB2B63C6BB00DDDD5F /* UnknownStuffs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnknownStuffs.swift; sourceTree = "<group>"; };
+		9103DEFC2B63C6BB00DDDD5F /* Stuffs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stuffs.swift; sourceTree = "<group>"; };
+		9103DEFD2B63C6BB00DDDD5F /* FancyStuffs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyStuffs.swift; sourceTree = "<group>"; };
+		9103DEFE2B63C6BB00DDDD5F /* StorageStuffs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageStuffs.swift; sourceTree = "<group>"; };
+		9103DEFF2B63C6BB00DDDD5F /* ImportantStuffs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportantStuffs.swift; sourceTree = "<group>"; };
+		9103DF002B63C6BB00DDDD5F /* LoginStuffs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginStuffs.swift; sourceTree = "<group>"; };
+		9103DF0B2B63C6C900DDDD5F /* SignUpAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpAlert.swift; sourceTree = "<group>"; };
+		9103DF0C2B63C6C900DDDD5F /* WidgetViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetViews.swift; sourceTree = "<group>"; };
+		9103DF0D2B63C6C900DDDD5F /* Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		9103DF0E2B63C6C900DDDD5F /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		9103DF0F2B63C6C900DDDD5F /* PrefsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefsView.swift; sourceTree = "<group>"; };
+		9103DF102B63C6C900DDDD5F /* PSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSView.swift; sourceTree = "<group>"; };
+		9103DF112B63C6C900DDDD5F /* DevelopmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevelopmentView.swift; sourceTree = "<group>"; };
+		9103DF122B63C6C900DDDD5F /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		9103DF132B63C6C900DDDD5F /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A5596EEC937BDB0A24A1B55E /* libPods-FuniOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FuniOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD659204A199BA4397DDA762 /* Pods-FuniOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuniOS.debug.xcconfig"; path = "Target Support Files/Pods-FuniOS/Pods-FuniOS.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9103DED52B63C5A100DDDD5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9103DF1F2B63C8B000DDDD5F /* LocalConsole in Frameworks */,
+				9103DF212B63D5E600DDDD5F /* LocalConsole in Frameworks */,
+				03D28CB43D2CD1D68E60C2F4 /* libPods-FuniOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18516325B40C6431ADDCE868 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD659204A199BA4397DDA762 /* Pods-FuniOS.debug.xcconfig */,
+				5E231AA621DA122BE13F4028 /* Pods-FuniOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8D816C5DC5925BF5C2B0DDF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5596EEC937BDB0A24A1B55E /* libPods-FuniOS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9103DECF2B63C5A100DDDD5F = {
+			isa = PBXGroup;
+			children = (
+				9103DEDA2B63C5A100DDDD5F /* FuniOS */,
+				9103DED92B63C5A100DDDD5F /* Products */,
+				18516325B40C6431ADDCE868 /* Pods */,
+				8D816C5DC5925BF5C2B0DDF7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9103DED92B63C5A100DDDD5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9103DED82B63C5A100DDDD5F /* FuniOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9103DEDA2B63C5A100DDDD5F /* FuniOS */ = {
+			isa = PBXGroup;
+			children = (
+				9103DF0A2B63C6C900DDDD5F /* Views */,
+				9103DEF72B63C6BB00DDDD5F /* Stuffs */,
+				9103DEDB2B63C5A100DDDD5F /* FuniOSApp.swift */,
+				9103DEE92B63C69A00DDDD5F /* CheckIfNil.swift */,
+				9103DEEA2B63C69B00DDDD5F /* GLogin.swift */,
+				9103DEEB2B63C69B00DDDD5F /* Token.swift */,
+				9103DEEC2B63C69B00DDDD5F /* Validation.swift */,
+				9103DEF32B63C6A100DDDD5F /* Info.plist */,
+				9103DEF52B63C6A800DDDD5F /* Launch Screen.storyboard */,
+				9103DEDF2B63C5A300DDDD5F /* Assets.xcassets */,
+				9103DEE12B63C5A300DDDD5F /* Preview Content */,
+			);
+			path = FuniOS;
+			sourceTree = "<group>";
+		};
+		9103DEE12B63C5A300DDDD5F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9103DEE22B63C5A300DDDD5F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9103DEF72B63C6BB00DDDD5F /* Stuffs */ = {
+			isa = PBXGroup;
+			children = (
+				9103DEF82B63C6BB00DDDD5F /* ConsoleStuffs.swift */,
+				9103DEF92B63C6BB00DDDD5F /* APIStuffs.swift */,
+				9103DEFA2B63C6BB00DDDD5F /* KeychainStuff.swift */,
+				9103DEFB2B63C6BB00DDDD5F /* UnknownStuffs.swift */,
+				9103DEFC2B63C6BB00DDDD5F /* Stuffs.swift */,
+				9103DEFD2B63C6BB00DDDD5F /* FancyStuffs.swift */,
+				9103DEFE2B63C6BB00DDDD5F /* StorageStuffs.swift */,
+				9103DEFF2B63C6BB00DDDD5F /* ImportantStuffs.swift */,
+				9103DF002B63C6BB00DDDD5F /* LoginStuffs.swift */,
+			);
+			path = Stuffs;
+			sourceTree = "<group>";
+		};
+		9103DF0A2B63C6C900DDDD5F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9103DF0B2B63C6C900DDDD5F /* SignUpAlert.swift */,
+				9103DF0C2B63C6C900DDDD5F /* WidgetViews.swift */,
+				9103DF0D2B63C6C900DDDD5F /* Icon.swift */,
+				9103DF0E2B63C6C900DDDD5F /* HomeView.swift */,
+				9103DF0F2B63C6C900DDDD5F /* PrefsView.swift */,
+				9103DF102B63C6C900DDDD5F /* PSView.swift */,
+				9103DF112B63C6C900DDDD5F /* DevelopmentView.swift */,
+				9103DF122B63C6C900DDDD5F /* OnboardingView.swift */,
+				9103DF132B63C6C900DDDD5F /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9103DED72B63C5A100DDDD5F /* FuniOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9103DEE62B63C5A300DDDD5F /* Build configuration list for PBXNativeTarget "FuniOS" */;
+			buildPhases = (
+				DB745C1309C6757EB6FA2859 /* [CP] Check Pods Manifest.lock */,
+				9103DED42B63C5A100DDDD5F /* Sources */,
+				9103DED52B63C5A100DDDD5F /* Frameworks */,
+				9103DED62B63C5A100DDDD5F /* Resources */,
+				B4B2AAA0E3697492156CDFD7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FuniOS;
+			packageProductDependencies = (
+				9103DF1E2B63C8B000DDDD5F /* LocalConsole */,
+				9103DF202B63D5E600DDDD5F /* LocalConsole */,
+			);
+			productName = FuniOS;
+			productReference = 9103DED82B63C5A100DDDD5F /* FuniOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9103DED02B63C5A100DDDD5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					9103DED72B63C5A100DDDD5F = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 9103DED32B63C5A100DDDD5F /* Build configuration list for PBXProject "FuniOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9103DECF2B63C5A100DDDD5F;
+			packageReferences = (
+				9103DF1D2B63C8B000DDDD5F /* XCRemoteSwiftPackageReference "LocalConsole" */,
+			);
+			productRefGroup = 9103DED92B63C5A100DDDD5F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9103DED72B63C5A100DDDD5F /* FuniOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9103DED62B63C5A100DDDD5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9103DEE32B63C5A300DDDD5F /* Preview Assets.xcassets in Resources */,
+				9103DEE02B63C5A300DDDD5F /* Assets.xcassets in Resources */,
+				9103DEF62B63C6A800DDDD5F /* Launch Screen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B4B2AAA0E3697492156CDFD7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FuniOS/Pods-FuniOS-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FuniOS/Pods-FuniOS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FuniOS/Pods-FuniOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB745C1309C6757EB6FA2859 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FuniOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9103DED42B63C5A100DDDD5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9103DF1A2B63C6C900DDDD5F /* DevelopmentView.swift in Sources */,
+				9103DF062B63C6BC00DDDD5F /* FancyStuffs.swift in Sources */,
+				9103DF1C2B63C6C900DDDD5F /* ContentView.swift in Sources */,
+				9103DF152B63C6C900DDDD5F /* WidgetViews.swift in Sources */,
+				9103DF192B63C6C900DDDD5F /* PSView.swift in Sources */,
+				9103DEEE2B63C69B00DDDD5F /* CheckIfNil.swift in Sources */,
+				9103DF042B63C6BC00DDDD5F /* UnknownStuffs.swift in Sources */,
+				9103DF012B63C6BC00DDDD5F /* ConsoleStuffs.swift in Sources */,
+				9103DF182B63C6C900DDDD5F /* PrefsView.swift in Sources */,
+				9103DF072B63C6BC00DDDD5F /* StorageStuffs.swift in Sources */,
+				9103DEF02B63C69B00DDDD5F /* Token.swift in Sources */,
+				9103DF052B63C6BC00DDDD5F /* Stuffs.swift in Sources */,
+				9103DF092B63C6BC00DDDD5F /* LoginStuffs.swift in Sources */,
+				9103DEDC2B63C5A100DDDD5F /* FuniOSApp.swift in Sources */,
+				9103DF142B63C6C900DDDD5F /* SignUpAlert.swift in Sources */,
+				9103DF162B63C6C900DDDD5F /* Icon.swift in Sources */,
+				9103DF082B63C6BC00DDDD5F /* ImportantStuffs.swift in Sources */,
+				9103DEF12B63C69B00DDDD5F /* Validation.swift in Sources */,
+				9103DEEF2B63C69B00DDDD5F /* GLogin.swift in Sources */,
+				9103DF032B63C6BC00DDDD5F /* KeychainStuff.swift in Sources */,
+				9103DF022B63C6BC00DDDD5F /* APIStuffs.swift in Sources */,
+				9103DF1B2B63C6C900DDDD5F /* OnboardingView.swift in Sources */,
+				9103DF172B63C6C900DDDD5F /* HomeView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9103DEE42B63C5A300DDDD5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9103DEE52B63C5A300DDDD5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9103DEE72B63C5A300DDDD5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD659204A199BA4397DDA762 /* Pods-FuniOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FuniOS/Preview Content\"";
+				DEVELOPMENT_TEAM = WF4J3YQN3K;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Fun;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.educational-games";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonathan.FuniOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9103DEE82B63C5A300DDDD5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E231AA621DA122BE13F4028 /* Pods-FuniOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FuniOS/Preview Content\"";
+				DEVELOPMENT_TEAM = WF4J3YQN3K;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Fun;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.educational-games";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonathan.FuniOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9103DED32B63C5A100DDDD5F /* Build configuration list for PBXProject "FuniOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9103DEE42B63C5A300DDDD5F /* Debug */,
+				9103DEE52B63C5A300DDDD5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9103DEE62B63C5A300DDDD5F /* Build configuration list for PBXNativeTarget "FuniOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9103DEE72B63C5A300DDDD5F /* Debug */,
+				9103DEE82B63C5A300DDDD5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9103DF1D2B63C8B000DDDD5F /* XCRemoteSwiftPackageReference "LocalConsole" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/duraidabdul/LocalConsole/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.12.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9103DF1E2B63C8B000DDDD5F /* LocalConsole */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9103DF1D2B63C8B000DDDD5F /* XCRemoteSwiftPackageReference "LocalConsole" */;
+			productName = LocalConsole;
+		};
+		9103DF202B63D5E600DDDD5F /* LocalConsole */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9103DF1D2B63C8B000DDDD5F /* XCRemoteSwiftPackageReference "LocalConsole" */;
+			productName = LocalConsole;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 9103DED02B63C5A100DDDD5F /* Project object */;
+}

@@ -1,0 +1,13 @@
+#!/bin/zsh
+agvtool new-marketing-version $1
+#if [ $3 != "p" ] ; then
+	./build.sh
+#fi
+cp ./build/Fun.ipa ./Fun.ipa
+BUILD_NUMBER=$(echo $(agvtool what-version | tr -d 'Current version of project Fun is:\n'))
+#agvtool new-marketing-version $1
+echo "Build Number: $BUILD_NUMBER"
+git add Fun.ipa
+git commit -m "iPA Update"
+git push
+gh release create "Fun_$1" ./build/Fun.ipa --notes "Build Number: $BUILD_NUMBER - $2"

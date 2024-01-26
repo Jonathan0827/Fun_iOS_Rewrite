@@ -1,0 +1,6 @@
+module Pods_FuniOS {
+  umbrella header "Pods-FuniOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

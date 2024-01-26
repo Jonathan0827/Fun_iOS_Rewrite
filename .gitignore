@@ -1,0 +1,6 @@
+/FuniOS.xcworkspace/xcuserdata/jonathanlim.xcuserdatad/UserInterfaceState.xcuserstate
+/build/*
+.DS_Store
+/FuniOS/Token.swift
+/FuniOS/Validation.swift
+/FuniOS/Stuffs/KeyChainStuff.swift
