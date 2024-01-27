@@ -4,7 +4,7 @@ agvtool new-marketing-version $1
 	./build.sh
 #fi
 cp ./build/Fun.ipa ./Fun.ipa
-BUILD_NUMBER=$(echo $(agvtool what-version | tr -d 'Current version of project Fun is:\n'))
+BUILD_NUMBER=$(echo $(agvtool what-version | tr -d 'Current version of project FuniOS is:\n'))
 #agvtool new-marketing-version $1
 echo "Build Number: $BUILD_NUMBER"
 git add Fun.ipa
