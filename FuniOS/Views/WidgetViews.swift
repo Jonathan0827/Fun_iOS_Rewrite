@@ -9,30 +9,6 @@ import Foundation
 import SwiftUI
 import AlertToast
 
-struct BackButton: View {
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    var body: some View { Button(action: {
-        self.presentationMode.wrappedValue.dismiss()
-    }) {
-        HStack {
-            Image(systemName: "arrowtriangle.left.fill") // set image here
-                .aspectRatio(contentMode: .fit)
-                .foregroundColor(Color("mode"))
-                .padding(.trailing, -5)
-                .font(.system(size: 8))
-            Text("뒤로 가기")
-                .foregroundColor(Color("mode"))
-                .font(.caption)
-                .fontWeight(.semibold)
-        }
-        .padding(.vertical, 5)
-        .padding(.horizontal, 10)
-        .background(Color("cprimary"))
-        .clipShape(.capsule)
-    }
-    }
-}
-
 struct AccountWidget: View {
     @ObservedObject var data: UserData
     @State var reload: Bool
@@ -123,9 +99,9 @@ struct AccountWidget: View {
                                         if (r["isUser"] as! Bool) {
                                             cprint("Logged in", "apiLogin", false)
                                             iURL = d.iURL
-                                                                                sub = d.sub
-                                                                                email = d.email
-                                                                                name = d.name
+                                            sub = d.sub
+                                            email = d.email
+                                            name = d.name
                                             self.vp.toast = AlertToast(displayMode: .hud, type: .systemImage("checkmark.circle.fill", Color(UIColor.systemGreen)), title: "로그인 성공!")
                                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
                                                 withAnimation {
@@ -173,7 +149,7 @@ struct AccountWidget: View {
                     }
                 }
             }
-            .onChange(of: data.sub) { nd in
+            .onChange(of: sub) { nd in
                 print("user id changed")
                 score = nil
                 if nd != "" {
@@ -186,7 +162,7 @@ struct AccountWidget: View {
                 
                 print("re-fetched score, applyng...")
             }
-            .onChange(of: data.iURL) { nd in
+            .onChange(of: iURL) { nd in
                 cprint("Image URL changed", "AccountWidget", false)
                 if nd.absoluteString != "" && nd != URL(string: "https://")!{
                     print("Getting Image", "AccountWidget", false)
@@ -256,39 +232,43 @@ struct AccountWidget: View {
 struct PSWidget: View {
     @State var pCount: Int = 0
     @State var showQC: Bool = false
+    
     var body: some View {
-        HStack {
-            Spacer()
-            VStack{
+        NavigationLink(destination: PSView()) {
+            HStack {
                 Spacer()
-                Text("문제 풀이")
-                    .font(.title)
-                    .fontWeight(.bold)
-                if showQC {
-                    Text("\(pCount)개의 문제를 풀어보세요!")
-                        .font(.subheadline)
+                VStack{
+                    Spacer()
+                    Text("문제 풀이")
+                        .font(.title)
                         .fontWeight(.bold)
+                    if showQC {
+                        Text("\(pCount)개의 문제를 풀어보세요!")
+                            .font(.subheadline)
+                            .fontWeight(.bold)
+                    }
+                    Spacer()
                 }
                 Spacer()
             }
-            Spacer()
-        }
-        .onAppear {
-            getQuests { qL in
-                pCount = qL.count
-                withAnimation {
-                    showQC = true
+            .onAppear {
+                getQuests { qL in
+                    pCount = qL.count
+                    withAnimation {
+                        showQC = true
+                    }
                 }
             }
+            .background(
+                RoundedRectangle(cornerRadius: 30)
+                    .fill(Color(UIColor.goodGray))
+                    .frame(height: 140)
+            )
+            .frame(height: 140)
+            .cornerRadius(30)
+            .shadow(color: .black.opacity(0.5), radius: 15)
+            .padding(.horizontal,20)
         }
-        .background(
-            RoundedRectangle(cornerRadius: 30)
-                .fill(Color(UIColor.goodGray))
-                .frame(height: 140)
-        )
-        
-        .cornerRadius(30)
-        .shadow(color: .black.opacity(0.5), radius: 20)
-        .padding(.horizontal,20)
+        .frame(height: 140)
     }
 }

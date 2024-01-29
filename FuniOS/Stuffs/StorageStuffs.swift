@@ -25,6 +25,9 @@ func sepUserDefaultS(_ key: String) -> [String] {
         return oD!.components(separatedBy: "**SPR**")
     }
 }
+func deleteUserDefault(_ key: String) {
+    UserDefaults.standard.removeObject(forKey: key)
+}
 func saveDocument(_ fileName: String, _ data: String) {
     let doc = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
     let file = doc.appendingPathComponent(fileName)

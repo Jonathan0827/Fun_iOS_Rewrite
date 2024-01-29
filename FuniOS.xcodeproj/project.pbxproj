@@ -31,7 +31,6 @@
 		9103DF172B63C6C900DDDD5F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DF0E2B63C6C900DDDD5F /* HomeView.swift */; };
 		9103DF182B63C6C900DDDD5F /* PrefsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DF0F2B63C6C900DDDD5F /* PrefsView.swift */; };
 		9103DF192B63C6C900DDDD5F /* PSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DF102B63C6C900DDDD5F /* PSView.swift */; };
-		9103DF1A2B63C6C900DDDD5F /* DevelopmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DF112B63C6C900DDDD5F /* DevelopmentView.swift */; };
 		9103DF1B2B63C6C900DDDD5F /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DF122B63C6C900DDDD5F /* OnboardingView.swift */; };
 		9103DF1C2B63C6C900DDDD5F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DF132B63C6C900DDDD5F /* ContentView.swift */; };
 		9103DF1F2B63C8B000DDDD5F /* LocalConsole in Frameworks */ = {isa = PBXBuildFile; productRef = 9103DF1E2B63C8B000DDDD5F /* LocalConsole */; };
@@ -65,7 +64,6 @@
 		9103DF0E2B63C6C900DDDD5F /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9103DF0F2B63C6C900DDDD5F /* PrefsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefsView.swift; sourceTree = "<group>"; };
 		9103DF102B63C6C900DDDD5F /* PSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSView.swift; sourceTree = "<group>"; };
-		9103DF112B63C6C900DDDD5F /* DevelopmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevelopmentView.swift; sourceTree = "<group>"; };
 		9103DF122B63C6C900DDDD5F /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		9103DF132B63C6C900DDDD5F /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A5596EEC937BDB0A24A1B55E /* libPods-FuniOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FuniOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,7 +170,6 @@
 				9103DF0E2B63C6C900DDDD5F /* HomeView.swift */,
 				9103DF0F2B63C6C900DDDD5F /* PrefsView.swift */,
 				9103DF102B63C6C900DDDD5F /* PSView.swift */,
-				9103DF112B63C6C900DDDD5F /* DevelopmentView.swift */,
 				9103DF122B63C6C900DDDD5F /* OnboardingView.swift */,
 				9103DF132B63C6C900DDDD5F /* ContentView.swift */,
 			);
@@ -301,7 +298,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9103DF1A2B63C6C900DDDD5F /* DevelopmentView.swift in Sources */,
 				9103DF062B63C6BC00DDDD5F /* FancyStuffs.swift in Sources */,
 				9103DF1C2B63C6C900DDDD5F /* ContentView.swift in Sources */,
 				9103DF152B63C6C900DDDD5F /* WidgetViews.swift in Sources */,
@@ -456,7 +452,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 58;
 				DEVELOPMENT_ASSET_PATHS = "\"FuniOS/Preview Content\"";
 				DEVELOPMENT_TEAM = WF4J3YQN3K;
 				ENABLE_PREVIEWS = YES;
@@ -476,7 +472,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonathan.FuniOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -492,7 +488,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 58;
 				DEVELOPMENT_ASSET_PATHS = "\"FuniOS/Preview Content\"";
 				DEVELOPMENT_TEAM = WF4J3YQN3K;
 				ENABLE_PREVIEWS = YES;
@@ -512,7 +508,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonathan.FuniOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

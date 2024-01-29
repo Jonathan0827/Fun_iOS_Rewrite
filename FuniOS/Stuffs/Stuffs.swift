@@ -102,3 +102,26 @@ struct SCalc: ViewModifier {
     }
 }
 
+struct BackButton: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    var body: some View { Button(action: {
+        self.presentationMode.wrappedValue.dismiss()
+    }) {
+        HStack {
+            Image(systemName: "arrowtriangle.left.fill")
+                .aspectRatio(contentMode: .fit)
+                .foregroundColor(Color("mode"))
+                .padding(.trailing, -5)
+                .font(.system(size: 8))
+            Text("뒤로 가기")
+                .foregroundColor(Color("mode"))
+                .font(.caption)
+                .fontWeight(.semibold)
+        }
+        .padding(.vertical, 5)
+        .padding(.horizontal, 10)
+        .background(Color("cprimary"))
+        .clipShape(.capsule)
+    }
+    }
+}

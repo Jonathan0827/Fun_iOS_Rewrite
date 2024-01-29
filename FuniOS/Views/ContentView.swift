@@ -72,23 +72,25 @@ struct ContentView: View {
                     }
                     .padding(.bottom, 50)
                     .environmentObject(vp)
-            case 2:
-                DevelopmentView()
-                    .tabItem {
-                        Label("Dev", systemImage: "hammer.fill")
-                    }
-                    .padding(.bottom, 50)
+//            case 2:
+//                DevelopmentView()
+//                    .tabItem {
+//                        Label("Dev", systemImage: "hammer.fill")
+//                    }
+//                    .padding(.bottom, 50)
             default:
                 Text("Why are you seeing this?")
                     .font(.title)
                     .foregroundColor(.red)
+                    .onAppear {
+                        cprint("Unknown View Presentation. tS: \(tabSelection)", "ContentView", true)
+                        tabSelection = 0
+                    }
             }
-            
-            //            }
             VStack {
                 Spacer()
                 if self.vp.showTabBar {
-                    fancyTabBar(selectedTab: $tabSelection, tabs: [["Home": "house.fill"], ["Settings": "gear"], ["Dev": "hammer.fill"]])
+                    fancyTabBar(selectedTab: $tabSelection, tabs: [["Home": "house.fill"], ["Settings": "gear"]])
                         .transition(.move(edge: .bottom))
                         .animation(.easeInOut(duration: 0.1), value: self.vp.showTabBar)
                 }
@@ -115,18 +117,21 @@ struct ContentView: View {
         .onAppear {
             cMan.isVisible = SC
             cprint("""
+ <혁명적인 언어 류희 프로그람!>
   ______ _    _ _   _
  |  ____| |  | | \\ | |
  | |__  | |  | |  \\| |
  |  __| | |  | | . ` |
  | |    | |__| | |\\  |
  |_|     \\____/|_| \\_|
-
+ <혁명적인 언어 류희 프로그람!>
 """)
             watchDog(&sub, &email, &iURL, &name, nv: nil)
+//            watchDog(nv: nil)
         }
         .onChange(of: sub, perform: { value in
             watchDog(&sub, &email, &iURL, &name, nv: value)
+            
         })
         .onChange(of: email, perform: { value in
             watchDog(&sub, &email, &iURL, &name, nv: value)
