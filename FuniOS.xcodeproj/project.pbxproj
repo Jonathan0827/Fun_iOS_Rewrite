@@ -35,6 +35,12 @@
 		9103DF1C2B63C6C900DDDD5F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DF132B63C6C900DDDD5F /* ContentView.swift */; };
 		9103DF1F2B63C8B000DDDD5F /* LocalConsole in Frameworks */ = {isa = PBXBuildFile; productRef = 9103DF1E2B63C8B000DDDD5F /* LocalConsole */; };
 		9103DF212B63D5E600DDDD5F /* LocalConsole in Frameworks */ = {isa = PBXBuildFile; productRef = 9103DF202B63D5E600DDDD5F /* LocalConsole */; };
+		919A620D2B71FA460094905D /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919A620C2B71FA460094905D /* Account.swift */; };
+		919A620F2B71FA7B0094905D /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919A620E2B71FA7A0094905D /* Feedback.swift */; };
+		919A62112B71FA980094905D /* Analysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919A62102B71FA980094905D /* Analysis.swift */; };
+		919A62132B71FAB80094905D /* LogOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919A62122B71FAB80094905D /* LogOutView.swift */; };
+		91C179572B6F7A3C00722352 /* ColorfulX in Frameworks */ = {isa = PBXBuildFile; productRef = 91C179562B6F7A3C00722352 /* ColorfulX */; };
+		91C1795A2B6F7B0100722352 /* Colorful in Frameworks */ = {isa = PBXBuildFile; productRef = 91C179592B6F7B0100722352 /* Colorful */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +72,10 @@
 		9103DF102B63C6C900DDDD5F /* PSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSView.swift; sourceTree = "<group>"; };
 		9103DF122B63C6C900DDDD5F /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		9103DF132B63C6C900DDDD5F /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		919A620C2B71FA460094905D /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		919A620E2B71FA7A0094905D /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
+		919A62102B71FA980094905D /* Analysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analysis.swift; sourceTree = "<group>"; };
+		919A62122B71FAB80094905D /* LogOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutView.swift; sourceTree = "<group>"; };
 		A5596EEC937BDB0A24A1B55E /* libPods-FuniOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FuniOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD659204A199BA4397DDA762 /* Pods-FuniOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuniOS.debug.xcconfig"; path = "Target Support Files/Pods-FuniOS/Pods-FuniOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +88,8 @@
 				9103DF1F2B63C8B000DDDD5F /* LocalConsole in Frameworks */,
 				9103DF212B63D5E600DDDD5F /* LocalConsole in Frameworks */,
 				03D28CB43D2CD1D68E60C2F4 /* libPods-FuniOS.a in Frameworks */,
+				91C1795A2B6F7B0100722352 /* Colorful in Frameworks */,
+				91C179572B6F7A3C00722352 /* ColorfulX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +176,7 @@
 		9103DF0A2B63C6C900DDDD5F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				919A620B2B71F9EE0094905D /* PreferenceItems */,
 				9103DF0B2B63C6C900DDDD5F /* SignUpAlert.swift */,
 				9103DF0C2B63C6C900DDDD5F /* WidgetViews.swift */,
 				9103DF0D2B63C6C900DDDD5F /* Icon.swift */,
@@ -172,8 +185,19 @@
 				9103DF102B63C6C900DDDD5F /* PSView.swift */,
 				9103DF122B63C6C900DDDD5F /* OnboardingView.swift */,
 				9103DF132B63C6C900DDDD5F /* ContentView.swift */,
+				919A62122B71FAB80094905D /* LogOutView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		919A620B2B71F9EE0094905D /* PreferenceItems */ = {
+			isa = PBXGroup;
+			children = (
+				919A620C2B71FA460094905D /* Account.swift */,
+				919A62102B71FA980094905D /* Analysis.swift */,
+				919A620E2B71FA7A0094905D /* Feedback.swift */,
+			);
+			path = PreferenceItems;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +221,8 @@
 			packageProductDependencies = (
 				9103DF1E2B63C8B000DDDD5F /* LocalConsole */,
 				9103DF202B63D5E600DDDD5F /* LocalConsole */,
+				91C179562B6F7A3C00722352 /* ColorfulX */,
+				91C179592B6F7B0100722352 /* Colorful */,
 			);
 			productName = FuniOS;
 			productReference = 9103DED82B63C5A100DDDD5F /* FuniOS.app */;
@@ -228,6 +254,8 @@
 			mainGroup = 9103DECF2B63C5A100DDDD5F;
 			packageReferences = (
 				9103DF1D2B63C8B000DDDD5F /* XCRemoteSwiftPackageReference "LocalConsole" */,
+				91C179552B6F7A3C00722352 /* XCRemoteSwiftPackageReference "ColorfulX" */,
+				91C179582B6F7B0100722352 /* XCRemoteSwiftPackageReference "Colorful" */,
 			);
 			productRefGroup = 9103DED92B63C5A100DDDD5F /* Products */;
 			projectDirPath = "";
@@ -311,10 +339,14 @@
 				9103DF052B63C6BC00DDDD5F /* Stuffs.swift in Sources */,
 				9103DF092B63C6BC00DDDD5F /* LoginStuffs.swift in Sources */,
 				9103DEDC2B63C5A100DDDD5F /* FuniOSApp.swift in Sources */,
+				919A620D2B71FA460094905D /* Account.swift in Sources */,
+				919A620F2B71FA7B0094905D /* Feedback.swift in Sources */,
 				9103DF142B63C6C900DDDD5F /* SignUpAlert.swift in Sources */,
 				9103DF162B63C6C900DDDD5F /* Icon.swift in Sources */,
 				9103DF082B63C6BC00DDDD5F /* ImportantStuffs.swift in Sources */,
+				919A62132B71FAB80094905D /* LogOutView.swift in Sources */,
 				9103DEF12B63C69B00DDDD5F /* Validation.swift in Sources */,
+				919A62112B71FA980094905D /* Analysis.swift in Sources */,
 				9103DEEF2B63C69B00DDDD5F /* GLogin.swift in Sources */,
 				9103DF032B63C6BC00DDDD5F /* KeychainStuff.swift in Sources */,
 				9103DF022B63C6BC00DDDD5F /* APIStuffs.swift in Sources */,
@@ -452,7 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 58;
+				CURRENT_PROJECT_VERSION = 255;
 				DEVELOPMENT_ASSET_PATHS = "\"FuniOS/Preview Content\"";
 				DEVELOPMENT_TEAM = WF4J3YQN3K;
 				ENABLE_PREVIEWS = YES;
@@ -488,7 +520,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 58;
+				CURRENT_PROJECT_VERSION = 255;
 				DEVELOPMENT_ASSET_PATHS = "\"FuniOS/Preview Content\"";
 				DEVELOPMENT_TEAM = WF4J3YQN3K;
 				ENABLE_PREVIEWS = YES;
@@ -549,6 +581,22 @@
 				minimumVersion = 1.12.1;
 			};
 		};
+		91C179552B6F7A3C00722352 /* XCRemoteSwiftPackageReference "ColorfulX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lakr233/ColorfulX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.2;
+			};
+		};
+		91C179582B6F7B0100722352 /* XCRemoteSwiftPackageReference "Colorful" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lakr233/Colorful.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -561,6 +609,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9103DF1D2B63C8B000DDDD5F /* XCRemoteSwiftPackageReference "LocalConsole" */;
 			productName = LocalConsole;
+		};
+		91C179562B6F7A3C00722352 /* ColorfulX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 91C179552B6F7A3C00722352 /* XCRemoteSwiftPackageReference "ColorfulX" */;
+			productName = ColorfulX;
+		};
+		91C179592B6F7B0100722352 /* Colorful */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 91C179582B6F7B0100722352 /* XCRemoteSwiftPackageReference "Colorful" */;
+			productName = Colorful;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

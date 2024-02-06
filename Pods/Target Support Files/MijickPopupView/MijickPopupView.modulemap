@@ -1,0 +1,6 @@
+module MijickPopupView {
+  umbrella header "MijickPopupView-umbrella.h"
+
+  export *
+  module * { export * }
+}

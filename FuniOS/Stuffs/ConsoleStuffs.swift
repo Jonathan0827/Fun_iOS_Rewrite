@@ -17,9 +17,9 @@ func cprint(_ msg: Any, _ from: String? = nil, _ isError: Bool? = nil) {
         let date = Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd hh:mm a"
-        let result = formatter.string(from: date)
+        let fDate = formatter.string(from: date)
 //        addUserDefaultS("errLogs", "\(from.cin()) \(result): \(msg)")
-        updateDocument("error.log", "\(from.cin()) \(result): \(msg)")
+        updateDocument("error.log", "\(from.cin()) \(fDate): \(msg)")
     }
 }
 func dPrint(_ v: Any) {

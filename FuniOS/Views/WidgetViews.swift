@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 import AlertToast
-
+import Colorful
 struct AccountWidget: View {
     @ObservedObject var data: UserData
     @State var reload: Bool
@@ -223,7 +223,7 @@ struct AccountWidget: View {
             )
             .foregroundColor(bColor)
             .cornerRadius(30)
-            .shadow(color: .black.opacity(0.5), radius: 15)
+//            .shadow(color: .black.opacity(0.5), radius: 5)
             .padding(20)
 //        }
 //        .padding()
@@ -232,7 +232,7 @@ struct AccountWidget: View {
 struct PSWidget: View {
     @State var pCount: Int = 0
     @State var showQC: Bool = false
-    
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         NavigationLink(destination: PSView()) {
             HStack {
@@ -259,14 +259,30 @@ struct PSWidget: View {
                     }
                 }
             }
-            .background(
-                RoundedRectangle(cornerRadius: 30)
-                    .fill(Color(UIColor.goodGray))
-                    .frame(height: 140)
-            )
+            .background {
+                ZStack {
+                    if colorScheme == .light {
+                        Color.goodGray
+                            .opacity(0.3)
+                            .cornerRadius(30)
+                            .frame(height: 140)
+                    }
+                    ColorfulView()
+                        .opacity(0.8)
+                        .cornerRadius(30)
+                    //                    .background(Color(UIColor.goodGray))
+                        .frame(height: 140)
+                    if colorScheme == .dark {
+                        Color.goodGray
+                            .opacity(0.7)
+                            .cornerRadius(30)
+                            .frame(height: 140)
+                    }
+                }
+            }
             .frame(height: 140)
             .cornerRadius(30)
-            .shadow(color: .black.opacity(0.5), radius: 15)
+            
             .padding(.horizontal,20)
         }
         .frame(height: 140)

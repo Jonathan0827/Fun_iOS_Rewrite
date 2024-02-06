@@ -68,7 +68,7 @@ func sendPOST(auth: String, endpoint: String, sub: String, params: [String: Any]
             a["success"] = true
             doReturn(a)
         } catch {
-            cprint("Error! Error message: \(error) Returning...", "sendPOST", true)
+            cprint("Error! Error message: \(error.localizedDescription) Returning...", "sendPOST", true)
             a = ["error": error, "success": false] as Dictionary
             doReturn(a)
         }
@@ -95,7 +95,7 @@ func sendGET(auth: String, endpoint: String, sub: String, doReturn: @escaping (D
         } catch {
             debugPrint(error)
             a = ["error": error, "success": false] as Dictionary<String, Any>
-            cprint("Error! Error message: \(error) Returning...", "sendGET", true)
+            cprint("Error! Error message: \(error.localizedDescription) Returning...", "sendGET", true)
             doReturn(a)
         }
     }

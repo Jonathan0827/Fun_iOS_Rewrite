@@ -26,7 +26,7 @@ struct HomeView: View {
     @State private var showSignUp = false
     @State var viewSize = [CGSize]()
     @State private var sd: Bool = true
-    @Binding var showTabBar: Bool
+//    @Binding var showTabBar: Bool
     @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var vp: vps
     var body: some View {
@@ -66,7 +66,10 @@ struct HomeView: View {
                         })
                         Button(action: {
                             logoutKeyChain()
-                            
+                            sub = ""
+                            email = ""
+                            name = ""
+                            iURL = URL(string: "https://")!
                         }, label: {
                             Text("Remove login credentials")
                         })
@@ -82,7 +85,7 @@ struct HomeView: View {
                 .navigationTitle("Fun")
             }
         }
-
+        .ignoresSafeArea()
         .alert(isPresented: $showAlert) {
             alertToShow
         }

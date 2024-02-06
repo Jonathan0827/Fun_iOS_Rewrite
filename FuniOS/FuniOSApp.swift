@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
-
+import MijickPopupView
 @main
 struct FuniOSApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .implementPopupView()
         }
     }
 }

@@ -28,6 +28,7 @@ PODS:
   - Logging (1.4.0)
   - Macaw (0.9.10):
     - SWXMLHash
+  - MijickPopupView (2.2.1)
   - SVGView (1.0.6)
   - SwiftJWT (3.6.200):
     - BlueCryptor (~> 1.0)
@@ -44,6 +45,7 @@ DEPENDENCIES:
   - GoogleSignIn
   - GoogleSignInSwiftSupport
   - Macaw
+  - MijickPopupView
   - SVGView
   - SwiftJWT
 
@@ -64,6 +66,7 @@ SPEC REPOS:
     - LoggerAPI
     - Logging
     - Macaw
+    - MijickPopupView
     - SVGView
     - SwiftJWT
     - SWXMLHash
@@ -84,10 +87,11 @@ SPEC CHECKSUMS:
   LoggerAPI: ad9c4a6f1e32f518fdb43a1347ac14d765ab5e3d
   Logging: beeb016c9c80cf77042d62e83495816847ef108b
   Macaw: 7af8ea57aa2cab35b4a52a45e6f85eea753ea9ae
+  MijickPopupView: 98c632cc9c4d272401b2a785f34459d160186abd
   SVGView: 4a9fa6296a5fdb6232dec7450aa98f169d0e274f
   SwiftJWT: 88c412708f58c169d431d344c87bc79a87c830ae
   SWXMLHash: dd733a457e9c4fe93b1538654057aefae4acb382
 
-PODFILE CHECKSUM: 4da19befaca102a1bfb839a992833372d4e5d92c
+PODFILE CHECKSUM: c9958df96c72ee3233c498ed8de81bbd153bcc61
 
 COCOAPODS: 1.14.3

@@ -23,8 +23,9 @@ struct PSView: View {
     @State var disableBtns = false // Disables buttons if true
     @State var showC = false // Shows correct/ incorrect if true
     @State var correct = false // Shows correct if true
-    @State private var score: String? = nil
-    @State var showAccountScore = false
+    @State private var score: String? = nil // Used to store account score
+    @State var showAccountScore = false // Used to prevent showing account score while user didn't login
+    @EnvironmentObject var vp: vps // Used to control views
     var body: some View {
         ZStack {
             Color(.goodBG)
@@ -227,6 +228,17 @@ struct PSView: View {
                 }
             }
             isFirstAppear = false // Set isFirstAppear to false
+        }
+        .onChange(of: isEditing) { nV in
+            if nV {
+                withAnimation {
+                    vp.showTabBar = false
+                }
+            } else {
+                withAnimation {
+                    vp.showTabBar = true
+                }
+            }
         }
     }
     func randomQuiz() { // Randomize Quiz

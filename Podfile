@@ -9,5 +9,6 @@ target 'FuniOS' do
   pod 'GoogleSignIn'
   pod 'GoogleSignInSwiftSupport'
   pod 'AlertToast'
+  pod 'MijickPopupView'
   # Pods for Fun
 end
