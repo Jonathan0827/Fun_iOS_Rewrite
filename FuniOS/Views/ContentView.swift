@@ -30,94 +30,96 @@ struct ContentView: View {
         ////            .toolbarBackground(.visible, for: .tabBar)
         //        }
         NavigationView {
-            ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
-                //            VStack {
-                Color(.goodBG)
-                    .ignoresSafeArea()
-                switch tabSelection {
-                case 0:
-                    HomeView()
-                        .tabItem {
-                            Label("Home", systemImage: "house.fill")
-                        }
-                        .padding(.bottom, 50)
-                        .environmentObject(vp)
-                case 1:
-                    PrefsView()
-                        .tabItem {
-                            Label("Settings", systemImage: "gear")
-                        }
-                        .padding(.bottom, 50)
-                        .environmentObject(vp)
-                    //            case 2:
-                    //                DevelopmentView()
-                    //                    .tabItem {
-                    //                        Label("Dev", systemImage: "hammer.fill")
-                    //                    }
-                    //                    .padding(.bottom, 50)
-                default:
-                    Text("Why are you seeing this?")
-                        .font(.title)
-                        .foregroundColor(.red)
-                        .onAppear {
-                            cprint("Unknown View Presentation. tS: \(tabSelection)", "ContentView", true)
-                            tabSelection = 0
-                        }
-                }
-                //            TabView(selection: $tabSelection) {
-                //                Group {
-                //                    HomeView()
-                //                        .tag(0)
-                //                        .environmentObject(vp)
-                //                        .ignoresSafeArea()
-                //                    //                .environmentObject(alertWDB)[
-                //                    //                .environmentObject(alertWOB)
-                //                    //                .environmentObject(toastS)
-                //                    //                .environmentObject(toastW)]
-                //                    //                            .tabItem {
-                //                    //                                Label("Home", systemImage: "house.fill")
-                //                    //                            }
-                //
-                //
-                //                    PrefsView()
-                //                        .tag(1)
-                //                        .environmentObject(vp)
-                //                        .ignoresSafeArea()
-                //                    //                            .tabItem {
-                //                    //                                Label("Settings", systemImage: "gear")
-                //                    //                            }
-                //                    //                .environmentObject(alertWDB)
-                //                    //                .environmentObject(alertWOB)
-                //                    //                .environmentObject(toastS)
-                //                    //                .environmentObject(toastW)
-                //                    //                        DevelopmentView()
-                //                    //                            .tabItem {
-                //                    //                                Label("Dev", systemImage: "hammer.fill")
-                //                    //                            }
-                //                }
-                //            }
-                //            .toolbarBackground(Color.purple, for: .tabBar)
-//                    .toolbar(.hidden, for: .tabBar)
+//            ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
+//                //            VStack {
+//                Color(.goodBG)
 //                    .ignoresSafeArea()
-                //            VStack {
-                //                Spacer()
-                if self.vp.showTabBar {
-                    fancyTabBar(selectedTab: $tabSelection, tabs: [["Home": "house.fill"], ["Settings": "gear"]])
-                        .transition(.move(edge: .bottom))
-                        .animation(.easeInOut(duration: 0.1), value: self.vp.showTabBar)
-                        .ignoresSafeArea(.keyboard)
-                }
-                
-                //            }
-                if self.vp.showSignUp {
-                    SignUpAlert()
-                        .ignoresSafeArea()
-                        .transition(.move(edge: .bottom))
-                        .animation(.easeInOut(duration: 0.1), value: true)
-                        .environmentObject(vp)
-                }
-                
-            }
+//                switch tabSelection {
+//                case 0:
+//                    HomeView()
+//                        .tabItem {
+//                            Label("Home", systemImage: "house.fill")
+//                        }
+//                        .padding(.bottom, 50)
+//                        .environmentObject(vp)
+//                case 1:
+//                    PrefsView()
+//                        .tabItem {
+//                            Label("Settings", systemImage: "gear")
+//                        }
+//                        .padding(.bottom, 50)
+//                        .environmentObject(vp)
+//                    //            case 2:
+//                    //                DevelopmentView()
+//                    //                    .tabItem {
+//                    //                        Label("Dev", systemImage: "hammer.fill")
+//                    //                    }
+//                    //                    .padding(.bottom, 50)
+//                default:
+//                    Text("Why are you seeing this?")
+//                        .font(.title)
+//                        .foregroundColor(.red)
+//                        .onAppear {
+//                            cprint("Unknown View Presentation. tS: \(tabSelection)", "ContentView", true)
+//                            tabSelection = 0
+//                        }
+//                }
+//                //            TabView(selection: $tabSelection) {
+//                //                Group {
+//                //                    HomeView()
+//                //                        .tag(0)
+//                //                        .environmentObject(vp)
+//                //                        .ignoresSafeArea()
+//                //                    //                .environmentObject(alertWDB)[
+//                //                    //                .environmentObject(alertWOB)
+//                //                    //                .environmentObject(toastS)
+//                //                    //                .environmentObject(toastW)]
+//                //                    //                            .tabItem {
+//                //                    //                                Label("Home", systemImage: "house.fill")
+//                //                    //                            }
+//                //
+//                //
+//                //                    PrefsView()
+//                //                        .tag(1)
+//                //                        .environmentObject(vp)
+//                //                        .ignoresSafeArea()
+//                //                    //                            .tabItem {
+//                //                    //                                Label("Settings", systemImage: "gear")
+//                //                    //                            }
+//                //                    //                .environmentObject(alertWDB)
+//                //                    //                .environmentObject(alertWOB)
+//                //                    //                .environmentObject(toastS)
+//                //                    //                .environmentObject(toastW)
+//                //                    //                        DevelopmentView()
+//                //                    //                            .tabItem {
+//                //                    //                                Label("Dev", systemImage: "hammer.fill")
+//                //                    //                            }
+//                //                }
+//                //            }
+//                //            .toolbarBackground(Color.purple, for: .tabBar)
+////                    .toolbar(.hidden, for: .tabBar)
+////                    .ignoresSafeArea()
+//                //            VStack {
+//                //                Spacer()
+//                if self.vp.showTabBar {
+//                    fancyTabBar(selectedTab: $tabSelection, tabs: [["Home": "house.fill"], ["Settings": "gear"]])
+//                        .transition(.move(edge: .bottom))
+//                        .animation(.easeInOut(duration: 0.1), value: self.vp.showTabBar)
+//                        .ignoresSafeArea(.keyboard)
+//                }
+//                
+//                //            }
+//                if self.vp.showSignUp {
+//                    SignUpAlert()
+//                        .ignoresSafeArea()
+//                        .transition(.move(edge: .bottom))
+//                        .animation(.easeInOut(duration: 0.1), value: true)
+//                        .environmentObject(vp)
+//                }
+//                
+//            }
+            feedbackView()
+                .environmentObject(vp)
             //        .ignoresSafeArea()
             .onAppear {
                 UITabBar.appearance().backgroundColor = UIColor.systemGray6

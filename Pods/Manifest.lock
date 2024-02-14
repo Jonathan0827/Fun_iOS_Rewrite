@@ -26,8 +26,6 @@ PODS:
   - LoggerAPI (1.9.200):
     - Logging (~> 1.1)
   - Logging (1.4.0)
-  - Macaw (0.9.10):
-    - SWXMLHash
   - MijickPopupView (2.2.1)
   - SVGView (1.0.6)
   - SwiftJWT (3.6.200):
@@ -36,7 +34,7 @@ PODS:
     - BlueRSA (~> 1.0)
     - KituraContracts (~> 1.2)
     - LoggerAPI (~> 1.7)
-  - SWXMLHash (7.0.2)
+  - SwiftSoup (2.7.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -44,10 +42,10 @@ DEPENDENCIES:
   - CryptoSwift (~> 1.8.0)
   - GoogleSignIn
   - GoogleSignInSwiftSupport
-  - Macaw
   - MijickPopupView
   - SVGView
   - SwiftJWT
+  - SwiftSoup
 
 SPEC REPOS:
   trunk:
@@ -65,11 +63,10 @@ SPEC REPOS:
     - KituraContracts
     - LoggerAPI
     - Logging
-    - Macaw
     - MijickPopupView
     - SVGView
     - SwiftJWT
-    - SWXMLHash
+    - SwiftSoup
 
 SPEC CHECKSUMS:
   Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
@@ -86,12 +83,11 @@ SPEC CHECKSUMS:
   KituraContracts: e845e60dc8627ad0a76fa55ef20a45451d8f830b
   LoggerAPI: ad9c4a6f1e32f518fdb43a1347ac14d765ab5e3d
   Logging: beeb016c9c80cf77042d62e83495816847ef108b
-  Macaw: 7af8ea57aa2cab35b4a52a45e6f85eea753ea9ae
   MijickPopupView: 98c632cc9c4d272401b2a785f34459d160186abd
   SVGView: 4a9fa6296a5fdb6232dec7450aa98f169d0e274f
   SwiftJWT: 88c412708f58c169d431d344c87bc79a87c830ae
-  SWXMLHash: dd733a457e9c4fe93b1538654057aefae4acb382
+  SwiftSoup: 06cbbf665257adfbfe0c927c63de246e5e844b9d
 
-PODFILE CHECKSUM: c9958df96c72ee3233c498ed8de81bbd153bcc61
+PODFILE CHECKSUM: eb3cbdb89247f9f7a95f4e9fae1eb131daf13f19
 
 COCOAPODS: 1.14.3

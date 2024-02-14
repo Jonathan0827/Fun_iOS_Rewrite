@@ -6,15 +6,9 @@
 //
 
 import SwiftUI
-import Macaw
-import SVGView
 struct Icon: View {
     var body: some View {
         Image("LogoSVG")
             .resizable()
     }
-}
-
-#Preview {
-    Icon()
 }
