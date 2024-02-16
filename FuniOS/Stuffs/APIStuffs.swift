@@ -40,8 +40,8 @@ struct Problem: Codable {
     let answer: [String]
     let e: Bool
 }
-//let apiPath = "https://api.reacts.kro.kr" // Production server
-let apiPath = "http://localhost:4000" // Local server for debugging
+let apiPath = "https://api.reacts.kro.kr" // Production server
+//let apiPath = "http://localhost:4000" // Local server for debugging
 func sendPOST(auth: String, endpoint: String, sub: String, params: [String: Any]? = nil, doReturn: @escaping (Dictionary<String, Any>) -> Void) {
     cprint("Starting Job: Send POST to \(endpoint)", "sendPOST", false)
     let headers: HTTPHeaders = [
