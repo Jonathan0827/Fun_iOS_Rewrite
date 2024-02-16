@@ -35,6 +35,8 @@
 		9103DF1C2B63C6C900DDDD5F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103DF132B63C6C900DDDD5F /* ContentView.swift */; };
 		9103DF1F2B63C8B000DDDD5F /* LocalConsole in Frameworks */ = {isa = PBXBuildFile; productRef = 9103DF1E2B63C8B000DDDD5F /* LocalConsole */; };
 		9103DF212B63D5E600DDDD5F /* LocalConsole in Frameworks */ = {isa = PBXBuildFile; productRef = 9103DF202B63D5E600DDDD5F /* LocalConsole */; };
+		91813CEE2B7DB4350019ACD3 /* SubmittedFeedbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91813CED2B7DB4350019ACD3 /* SubmittedFeedbacks.swift */; };
+		91813CF02B7DB49F0019ACD3 /* InAppFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91813CEF2B7DB49F0019ACD3 /* InAppFeedback.swift */; };
 		919A620D2B71FA460094905D /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919A620C2B71FA460094905D /* Account.swift */; };
 		919A620F2B71FA7B0094905D /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919A620E2B71FA7A0094905D /* Feedback.swift */; };
 		919A62112B71FA980094905D /* Analysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919A62102B71FA980094905D /* Analysis.swift */; };
@@ -72,6 +74,8 @@
 		9103DF102B63C6C900DDDD5F /* PSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSView.swift; sourceTree = "<group>"; };
 		9103DF122B63C6C900DDDD5F /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		9103DF132B63C6C900DDDD5F /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		91813CED2B7DB4350019ACD3 /* SubmittedFeedbacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmittedFeedbacks.swift; sourceTree = "<group>"; };
+		91813CEF2B7DB49F0019ACD3 /* InAppFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppFeedback.swift; sourceTree = "<group>"; };
 		919A620C2B71FA460094905D /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		919A620E2B71FA7A0094905D /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		919A62102B71FA980094905D /* Analysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analysis.swift; sourceTree = "<group>"; };
@@ -160,7 +164,6 @@
 		9103DEF72B63C6BB00DDDD5F /* Stuffs */ = {
 			isa = PBXGroup;
 			children = (
-				9103DEF82B63C6BB00DDDD5F /* ConsoleStuffs.swift */,
 				9103DEF92B63C6BB00DDDD5F /* APIStuffs.swift */,
 				9103DEFA2B63C6BB00DDDD5F /* KeychainStuff.swift */,
 				9103DEFB2B63C6BB00DDDD5F /* UnknownStuffs.swift */,
@@ -177,12 +180,13 @@
 			isa = PBXGroup;
 			children = (
 				919A620B2B71F9EE0094905D /* PreferenceItems */,
+				91813CEC2B7DB40C0019ACD3 /* Feedback */,
 				9103DF0B2B63C6C900DDDD5F /* SignUpAlert.swift */,
 				9103DF0C2B63C6C900DDDD5F /* WidgetViews.swift */,
 				9103DF0D2B63C6C900DDDD5F /* Icon.swift */,
 				9103DF0E2B63C6C900DDDD5F /* HomeView.swift */,
-				9103DF0F2B63C6C900DDDD5F /* PrefsView.swift */,
 				9103DF102B63C6C900DDDD5F /* PSView.swift */,
+				9103DEF82B63C6BB00DDDD5F /* ConsoleStuffs.swift */,
 				9103DF122B63C6C900DDDD5F /* OnboardingView.swift */,
 				9103DF132B63C6C900DDDD5F /* ContentView.swift */,
 				919A62122B71FAB80094905D /* LogOutView.swift */,
@@ -190,12 +194,22 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		91813CEC2B7DB40C0019ACD3 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				919A620E2B71FA7A0094905D /* Feedback.swift */,
+				91813CEF2B7DB49F0019ACD3 /* InAppFeedback.swift */,
+				91813CED2B7DB4350019ACD3 /* SubmittedFeedbacks.swift */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
 		919A620B2B71F9EE0094905D /* PreferenceItems */ = {
 			isa = PBXGroup;
 			children = (
 				919A620C2B71FA460094905D /* Account.swift */,
 				919A62102B71FA980094905D /* Analysis.swift */,
-				919A620E2B71FA7A0094905D /* Feedback.swift */,
+				9103DF0F2B63C6C900DDDD5F /* PrefsView.swift */,
 			);
 			path = PreferenceItems;
 			sourceTree = "<group>";
@@ -349,8 +363,10 @@
 				919A62112B71FA980094905D /* Analysis.swift in Sources */,
 				9103DEEF2B63C69B00DDDD5F /* GLogin.swift in Sources */,
 				9103DF032B63C6BC00DDDD5F /* KeychainStuff.swift in Sources */,
+				91813CF02B7DB49F0019ACD3 /* InAppFeedback.swift in Sources */,
 				9103DF022B63C6BC00DDDD5F /* APIStuffs.swift in Sources */,
 				9103DF1B2B63C6C900DDDD5F /* OnboardingView.swift in Sources */,
+				91813CEE2B7DB4350019ACD3 /* SubmittedFeedbacks.swift in Sources */,
 				9103DF172B63C6C900DDDD5F /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,7 +500,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 383;
+				CURRENT_PROJECT_VERSION = 462;
 				DEVELOPMENT_ASSET_PATHS = "\"FuniOS/Preview Content\"";
 				DEVELOPMENT_TEAM = WF4J3YQN3K;
 				ENABLE_PREVIEWS = YES;
@@ -520,7 +536,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 383;
+				CURRENT_PROJECT_VERSION = 462;
 				DEVELOPMENT_ASSET_PATHS = "\"FuniOS/Preview Content\"";
 				DEVELOPMENT_TEAM = WF4J3YQN3K;
 				ENABLE_PREVIEWS = YES;

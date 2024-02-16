@@ -75,13 +75,22 @@ func sendPOST(auth: String, endpoint: String, sub: String, params: [String: Any]
     }
 //    return a
 }
-func sendGET(auth: String, endpoint: String, sub: String, doReturn: @escaping (Dictionary<String, Any>) -> Void) {
+func sendGET(auth: String, endpoint: String, sub: String, params: [String: Any]? = nil,doReturn: @escaping (Dictionary<String, Any>) -> Void) {
     cprint("Starting Job: Send GET to \(endpoint)", "sendGET", false)
     let headers: HTTPHeaders = [
         "Authorization": auth
     ]
     var a = Dictionary<String, Any>()
-    AF.request("\(apiPath)/\(endpoint)?sub=\(sub)", method: .get, encoding: JSONEncoding.default, headers: headers).responseData { res in
+    var p = ""
+    if params != nil {
+        cprint("Param is not empty. Adding to URL", "sendGET", false)
+        params!.forEach { i in
+            p += "&\(i.key)=\(i.value)"
+        }
+        
+    }
+    cprint("URL is \(apiPath)/\(endpoint)?sub=\(sub)\(p)", "sendGET", false)
+    AF.request("\(apiPath)/\(endpoint)?sub=\(sub)\(p)", method: .get, encoding: JSONEncoding.default, headers: headers).responseData { res in
         if TARGET_IPHONE_SIMULATOR == 1 {
             debugPrint(res)
         }

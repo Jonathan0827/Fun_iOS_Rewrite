@@ -17,8 +17,8 @@ struct PrefsThing<Content>: View where Content: View {
         
         ZStack {
             RoundedRectangle(cornerRadius: 15)
-//                .fill(Color(uiColor: UIColor.systemGray6))
-                .fill(.goodGray)
+                .fill(Color(uiColor: UIColor.systemGray6))
+//                .fill(.goodGray)
                 .frame(height: 50)
             HStack {
                 toRender
@@ -28,7 +28,7 @@ struct PrefsThing<Content>: View where Content: View {
                 //                    .foregroundStyle(.cprimary)
                 if isNav {
                     Image(systemName: "chevron.right")
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(.gray)
                 }
             }
             .padding(.horizontal, 10)

@@ -1,0 +1,1 @@
+../../../appstore-card-transition/Sources/AppstoreTransition/AppstoreTransition.h

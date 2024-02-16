@@ -5,6 +5,7 @@ target 'FuniOS' do
   pod 'CryptoSwift', '~> 1.8.0'
   pod 'Alamofire'
 #  pod 'Macaw'
+  pod 'appstore-card-transition'
   pod 'SVGView'
   pod 'GoogleSignIn'
   pod 'GoogleSignInSwiftSupport'

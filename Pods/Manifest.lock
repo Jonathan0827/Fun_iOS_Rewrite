@@ -7,6 +7,7 @@ PODS:
   - AppAuth/Core (1.6.2)
   - AppAuth/ExternalUserAgent (1.6.2):
     - AppAuth/Core
+  - appstore-card-transition (1.0.4)
   - BlueCryptor (1.0.32)
   - BlueECC (1.2.5)
   - BlueRSA (1.0.200)
@@ -39,6 +40,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - AlertToast
+  - appstore-card-transition
   - CryptoSwift (~> 1.8.0)
   - GoogleSignIn
   - GoogleSignInSwiftSupport
@@ -52,6 +54,7 @@ SPEC REPOS:
     - Alamofire
     - AlertToast
     - AppAuth
+    - appstore-card-transition
     - BlueCryptor
     - BlueECC
     - BlueRSA
@@ -72,6 +75,7 @@ SPEC CHECKSUMS:
   Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
   AlertToast: e8db15da727beff75500bcf33a78cd617f408fa1
   AppAuth: 3bb1d1cd9340bd09f5ed189fb00b1cc28e1e8570
+  appstore-card-transition: 660c136cb8a0f0004b2e99e99f1305bfa041f05c
   BlueCryptor: b0aee3d9b8f367b49b30de11cda90e1735571c24
   BlueECC: 0d18e93347d3ec6d41416de21c1ffa4d4cd3c2cc
   BlueRSA: dfeef51db96bcc4edec654956c1581adbda4e6a3
@@ -88,6 +92,6 @@ SPEC CHECKSUMS:
   SwiftJWT: 88c412708f58c169d431d344c87bc79a87c830ae
   SwiftSoup: 06cbbf665257adfbfe0c927c63de246e5e844b9d
 
-PODFILE CHECKSUM: eb3cbdb89247f9f7a95f4e9fae1eb131daf13f19
+PODFILE CHECKSUM: 2697d874d0a5655fbee277a4d8603695bf3f6eaa
 
 COCOAPODS: 1.14.3
