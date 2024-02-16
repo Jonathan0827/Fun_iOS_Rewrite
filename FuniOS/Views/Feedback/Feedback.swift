@@ -11,7 +11,7 @@ import AlertToast
 import Alamofire
 import SwiftSoup
 struct feedbackView: View {
-    @State var feedbackType: Int = 3
+    @State var feedbackType: Int = 0
     @State var didSelectType = false
     @FocusState private var isEditingTitle
     @FocusState private var isEditingBody
@@ -49,15 +49,16 @@ struct feedbackView: View {
                         .font(.headline)
                         .fontWeight(.bold)
                         .padding(.bottom)
+                        .onAppear {
+                            UIApplication.shared.open(URL(string: "mailto:")!)
+                        }
                 case 2:
-                    //                    inApp
                     inAppFeedbackView(isEditingTitle: $isEditingTitle, isEditingBody: $isEditingBody)
                 case 3:
-                    //                    Get Feedbacks
                     submittedFeedbacksView(hideTitle: $hideTitle)
-                case 4:
-                    //                    Testing
-                    inAppFeedbackView(isEditingTitle: $isEditingTitle, isEditingBody: $isEditingBody, showSuccess: true)
+//                case 4:
+//                    //                    Testing
+//                    inAppFeedbackView(isEditingTitle: $isEditingTitle, isEditingBody: $isEditingBody, showSuccess: true)
                 default:
                     VStack {
                         Text("피드백을 보낼 방식을 선택 해주세요")
@@ -119,9 +120,9 @@ struct feedbackView: View {
                                 .frame(width: 310, height: 50)
                                 .background(RoundedRectangle(cornerRadius: 15).fill(Color.goodGray))
                         })
-                        Button("Do TEST", action: {
-                            feedbackType = 4
-                        })
+//                        Button("Do TEST", action: {
+//                            feedbackType = 4
+//                        })
                     }
                     .foregroundColor(.cprimary)
                 }
