@@ -35,11 +35,7 @@ struct feedbackView: View {
                     Text("피드백 제출")
                         .font(.largeTitle)
                         .fontWeight(.bold)
-                    
-                    Text("보안과 관련된 피드백은 security@reacts.kro.kr로 보내주세요")
-                        .font(.caption)
-                        .fontWeight(.light)
-                        .padding(.bottom)
+                        .padding(.top, feedbackType==2 ? 10 : 0)
                     //                    Spacer()
                 }
                 //            if didSelectType {
@@ -50,7 +46,7 @@ struct feedbackView: View {
                         .fontWeight(.bold)
                         .padding(.bottom)
                         .onAppear {
-                            UIApplication.shared.open(URL(string: "mailto:")!)
+                            UIApplication.shared.open(URL(string: "mailto:feedback@reacts.kro.kr")!)
                         }
                 case 2:
                     inAppFeedbackView(isEditingTitle: $isEditingTitle, isEditingBody: $isEditingBody)

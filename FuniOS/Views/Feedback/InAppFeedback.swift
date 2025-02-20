@@ -67,7 +67,7 @@ struct inAppFeedbackView: View {
                                 Link("피드백 열기", destination: URL(string: isURL)!)
                                     .font(.caption)
                             } else {
-                                Text("..? 이거 나오면 안되는데")
+                                Text(":(")
                             }
                         }
                         .background(.goodBG)
@@ -135,15 +135,15 @@ struct inAppFeedbackView: View {
                                         .padding(.horizontal, 20)
                                 }
                             }
-                            Picker("피드백 종류", selection: $type, content: {
-                                Text("버그").tag(0)
-                                Text("기능 제안").tag(1)
-                                Text("기타").tag(2)
-                                Text("보안").tag(3)
-                            })
-                            .pickerStyle(.segmented)
-                            .padding(.horizontal, 20)
-                            .padding(.vertical, 5)
+//                            Picker("피드백 종류", selection: $type, content: {
+//                                Text("버그").tag(0)
+//                                Text("기능 제안").tag(1)
+//                                Text("기타").tag(2)
+//                                Text("보안").tag(3)
+//                            })
+//                            .pickerStyle(.segmented)
+//                            .padding(.horizontal, 20)
+//                            .padding(.vertical, 5)
                             Spacer()
                             //                if showConfirm {
                             Button(action: {

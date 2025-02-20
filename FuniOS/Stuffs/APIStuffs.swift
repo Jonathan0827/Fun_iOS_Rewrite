@@ -9,29 +9,7 @@ import Foundation
 import Alamofire
 struct DecodableType: Decodable { let url: String }
 
-func sendTest(local: Bool) -> Dictionary<String, Any> {
-    let jwt = makeJWT(clm: JWTClaims(iss: "FunAuthorization", sub: "123", exp: tmk(s: 5)))
-    let aes = makeAES(d: jwt)
-    
-    if aes.success {
-        var a = Dictionary<String, Any>()
-        AF.request((local ? "http://localhost:4000/test" : "https://api.reacts.kro.kr/test" ), method: .post, parameters: ["sub": "123"], encoding: JSONEncoding.default,headers: ["Authorization": aes.out]).responseData { res in
-//            debugPrint(res)
-//            let removeCharacters: Set<Character> = ["\n", " ", ";"]
-//            a.removeAll(where: { removeCharacters.contains($0) })
-            do {
-                a = try JSONSerialization.jsonObject(with: res.value!, options: []) as! [String: Any]
-                print(a["test"] ?? "Got no data for \"test\"")
-            } catch {
-                debugPrint(error)
-            }
-        }
-        return a
-    } else {
-        return ["error": aes.out]
-    }
-    
-}
+
 struct P: Codable {
     let problems: [Problem]
 }
@@ -40,7 +18,32 @@ struct Problem: Codable {
     let answer: [String]
     let e: Bool
 }
-let apiPath = "https://api.reacts.kro.kr" // Production server
+let apiPath = readKeyChain("apiPath") == "" ? "https://api.reacts.kro.kr" : readKeyChain("apiPath") // Production server
+func sendTest(doReturn: @escaping (Dictionary<String, Any>) -> Void)  {
+    let jwt = makeJWT(clm: JWTClaims(iss: "FunAuthorization", sub: "123", exp: tmk(s: 5)))
+    let aes = makeAES(d: jwt)
+    print(apiPath)
+    if aes.success {
+        var a = Dictionary<String, Any>()
+        AF.request(("\(apiPath)/test" ), method: .get, parameters: ["sub": "123"], encoding:
+                    URLEncoding.default,headers: ["Authorization": aes.out]).responseData { res in
+//            debugPrint(res)
+//            let removeCharacters: Set<Character> = ["\n", " ", ";"]
+//            a.removeAll(where: { removeCharacters.contains($0) })
+            do {
+                debugPrint(res)
+//                a = try JSONSerialization.jsonObject(with: res.value!, options: []) as! [String: Any]
+                print("Test complete")
+            } catch {
+                debugPrint(error)
+            }
+        }
+        doReturn(["a":"a"])
+    } else {
+        doReturn(["error": aes.out])
+    }
+    
+}
 //let apiPath = "http://localhost:4000" // Local server for debugging
 func sendPOST(auth: String, endpoint: String, sub: String, params: [String: Any]? = nil, doReturn: @escaping (Dictionary<String, Any>) -> Void) {
     cprint("Starting Job: Send POST to \(endpoint)", "sendPOST", false)

@@ -28,7 +28,7 @@ struct AccountView: View {
                         .resizable()
                         .frame(width: 150, height: 150)
                         .cornerRadius(150)
-                        .shadow(color: sColor, radius: 5)
+//                        .shadow(color: sColor, radius: 5)
                 } else {
                     Image(systemName: "person.circle")
                         .resizable()
@@ -154,26 +154,6 @@ struct AccountView: View {
                 withAnimation {
                     sColor = Color(uiColor: ni?.asUIImage().averageColorWOVtc() ?? UIColor.black)
                 }
-//                let a = {
-//                    var b = 0
-//                    colorA.forEach { i in
-//                        b += Int(i)
-//                    }
-//                    return b
-//                }
-//                withAnimation {
-//                    if a() < 380 {
-//                        bColor = Color.white
-//                    } else {
-//                        bColor = Color.black
-//                    }
-//                }
-            } else {
-//                print("Image is blank - Using .goodGray for background", "AccountView", false)
-//                withAnimation {
-//                    aColor = Color(UIColor.goodGray)
-//                    bColor = Color.primary
-//                }
             }
         }
         .navigationTitle("계정 설정")

@@ -10,7 +10,6 @@ import AlertToast
 
 struct PrefsThing<Content>: View where Content: View {
     var toRender: Content
-    //    var toRenderTrail: Content!
     let isNav: Bool
     
     var body: some View {
@@ -19,13 +18,11 @@ struct PrefsThing<Content>: View where Content: View {
             RoundedRectangle(cornerRadius: 15)
                 .fill(Color(uiColor: UIColor.systemGray6))
 //                .fill(.goodGray)
-                .frame(height: 50)
+                .frame(height: 45)
             HStack {
                 toRender
                     .foregroundStyle(.cprimary)
                 Spacer()
-                //                toRenderTrail
-                //                    .foregroundStyle(.cprimary)
                 if isNav {
                     Image(systemName: "chevron.right")
                         .foregroundStyle(.gray)
@@ -59,10 +56,6 @@ struct PrefsView: View {
                 Color(.goodBG)
                     .ignoresSafeArea()
                 ScrollView {
-                    //                Image(systemName: "gear")
-                    //                    .resizable()
-                    //                    .frame(width: 80, height: 80, alignment: .center)
-//                    List {
                     LazyVStack(alignment: .leading) {
                         Section(header: Label("계정", systemImage: "person").foregroundColor(.secondary).font(.caption)) {
                             NavigationLink(destination: AccountView(pImg: $pImg), label: {
@@ -82,7 +75,7 @@ struct PrefsView: View {
                                         } else {
                                             Image(systemName: "person.circle")
                                                 .resizable()
-                                                .frame(width: 30, height: 30)
+                                                .frame(width: 27, height: 27)
                                         }
                                     }
                                 }), isNav: true)
@@ -97,35 +90,25 @@ struct PrefsView: View {
                             })
                         }
                         .padding(.horizontal)
-                        Section(header: Label("디버깅", systemImage: "gearshape.2").foregroundColor(.secondary).font(.caption)) {
-                            NavigationLink(destination: AnalysisView(), label: {
-                                PrefsThing(toRender: Label("오류 로그", systemImage: "hammer.fill")
-                                , isNav: true)
-                            })
-                                .padding(.bottom, -5)
+                        Section(header: Label("고급", systemImage: "gearshape.2").foregroundColor(.secondary).font(.caption)) {
                             PrefsThing(toRender: Toggle(isOn: $SC) {
                                 Label("콘솔", systemImage: "ladybug")
                             }, isNav: false)
-//                            .padding(.horizontal)
+                            .padding(.bottom, -5)
+                            NavigationLink(destination: AnalysisView(), label: {
+                                PrefsThing(toRender: Label("오류 로그", systemImage: "text.document.fill")
+                                , isNav: true)
+                            })
+                                .padding(.bottom, -5)
+                            NavigationLink(destination: DevMenu(), label: {
+                                PrefsThing(toRender: Label("개발자 메뉴", systemImage: "hammer.fill")
+                                , isNav: true)
+                            })
                         }
                         .padding(.horizontal)
-//                        Section(header: Label("Console", systemImage: "ladybug")) {
-//                            Toggle("Console", isOn: $SC)
-//                        }
-                        
-                        
                     }
                     .backgroundStyle(Color.gray)
-                    
-//                    .foregroundColor(.cprimary)
-//                    .onAppear{
-//                        UITableView.appearance().backgroundColor = .goodBG
-//                    }
-//                    .listStyle(.insetGrouped)
                     .navigationTitle("설정")
-//                    .sheet(isPresented: $showAnalysisView, content: {
-//                        AnalysisView()
-//                    })
                 }
             }
         }

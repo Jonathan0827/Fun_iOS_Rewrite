@@ -26,15 +26,15 @@ struct AnalysisView: View {
                         .font(.system(.caption2, design: .monospaced))
                         .padding()
                 }
-                .frame(width: 300, height: 300, alignment: .leading)
-                .padding(5)
+                .frame(width: 330, height: 300, alignment: .leading)
+//                .padding(5)
                 .background(RoundedRectangle(cornerRadius: 15).fill(.goodGray))
                 .padding(.horizontal, 30)
                 .padding(.vertical, 10)
                 HStack {
                     Button(action: {
                         UIPasteboard.general.string = errLogsStr
-                        self.vp.toast = AlertToast(displayMode: .hud, type: .systemImage("checkmark.circle.fill", .green), title: "복사됨")
+                        self.vp.toast = AlertToast(displayMode: .hud, type: .systemImage("checkmark.circle.fill", .green), title: "클립보드에 복사되었습니다")
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                             self.vp.showToast = true
                         }
@@ -48,11 +48,6 @@ struct AnalysisView: View {
                         
                     })
                     .padding(.horizontal, 2.5)
-                    //                Button(action: {
-                    ////                    let av = UIActivityViewController(activityItems: [errLogsStr], applicationActivities: nil)
-                    ////                    UIApplication.shared.windows.first?.rootViewController?.present(av, animated: true, completion: nil)
-                    //                }, label: {
-                    //                        Text("공유")
                     ShareLink(item: urlDocument("error.log")) {
                         Label("공유", systemImage: "square.and.arrow.up")
                             .fontWeight(.bold)
